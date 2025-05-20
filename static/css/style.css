@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.font-fredoka-one {
+  font-family: "Fredoka One", cursive;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.animated-underline {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.animated-underline:hover {
+  color: inherit;
+}
+
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor; /* to inherits the text's color */
+  transition: transform 0.3s ease;
+}
+
+.animated-underline:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+body {
+	background: hsl(212, 100%, 91%);
+}
+
+/* BLOB */
+.blob {
+  animation: blobby 5s linear infinite alternate;
+}
+.blob:last-child{
+  animation-delay: 0.5s;
+}
+@keyframes blobby {
+  0%, 100% {
+    border-radius: 50%;
+  }
+  20%, 80% {
+    border-radius: 45% 55% 45% 55% / 50% 60% 40% 50%;
+  }
+  40%, 60% {
+    border-radius: 60% 40% 55% 45% / 50% 40% 60% 50%;
+  }
+  50% {
+    border-radius: 55% 45% 60% 40% / 45% 55% 45% 55%;
+  }
+}

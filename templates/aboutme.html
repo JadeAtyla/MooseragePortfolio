@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}About Me{% endblock %}
+{% block content %}
+<section class="w-full max-w-5xl py-10 px-6 text-[#333]">
+  <h1 class="text-4xl font-bold mb-4">About Me</h1>
+  <p class="text-lg leading-relaxed mb-6">
+    I'm Josh A. Manzano, also known as Jet, a 24-year-old passionate computer science graduate from Cavite State University - Bacoor Campus. I love crafting intuitive digital experiences through clean code and modern design.
+  </p>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div>
+      <h2 class="text-2xl font-semibold mb-2">Personal Info</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li><strong>Nickname:</strong> Jet</li>
+        <li><strong>Birthdate:</strong> July 7, 2000</li>
+        <li><strong>Address:</strong> 082 City Lands 2, Bacoor, Cavite</li>
+        <li><strong>Email:</strong> joshmanzano@gmail.com</li>
+        <li><strong>Phone:</strong> 09513192514</li>
+        <li><strong>Course:</strong> B.S. Computer Science</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="text-2xl font-semibold mb-2">Family Background</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li><strong>Father:</strong> Luis Manzano (Deceased)</li>
+        <li><strong>Mother:</strong> Lora Tolentino (Housewife)</li>
+        <li><strong>Step-Father:</strong> Carl Tolentino (Deceased)</li>
+        <li><strong>Siblings:</strong> Josh, Jay, Lan, Amia, Kimma</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-10 bg-[#FFEDD5] p-6 rounded-lg shadow-lg animate-fade-in">
+    <h2 class="text-2xl font-bold mb-2">The Real Me</h2>
+    <p>
+      I’m deeply curious about how technology can change lives, driven by a love for creative problem-solving. Outside of programming, I enjoy digital art and collaborating on innovative projects. My personality leans toward empathy, resilience, and a growth mindset.
+    </p>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Resume{% endblock %}
+{% block content %}
+<section class="w-full max-w-5xl py-10 px-6 text-[#333] animate-fade-in">
+  <h1 class="text-4xl font-bold mb-6">Resume</h1>
+  
+  <div class="bg-white p-8 rounded-lg shadow-lg">
+    <h2 class="text-2xl font-semibold mb-4">Full Resume</h2>
+    <p class="mb-6">
+      See attached resume for full experience and credentials.
+    </p>
+
+    <a 
+      href="{{ url_for('static', filename='documents/Josh_Manzano_Resume.pdf') }}" 
+      download 
+      class="inline-block bg-[#FFB22C] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#e69a1a] transition duration-300"
+      aria-label="Download Resume"
+    >
+      Download CV
+    </a>
+  </div>
+</section>
+{% endblock %}

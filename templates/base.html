@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mooserage | {% block title %}Home Page{% endblock %}</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              fredoka: ["Fredoka One", "cursive"], // assuming you use this
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body
+    class="flex flex-col min-h-screen items-center bg-[#FEF3E2] font-poppins"
+  >
+    <!-- Header -->
+    <header
+      class="w-[90%] flex flex-col items-center justify-center bg-[#FFB22C] rounded-b-[6.25rem]"
+    >
+      <!-- Left Nav -->
+      <div
+        class="flex justify-around items-center text-[1.25rem] font-semibold"
+      >
+        <ul id="nav-left" class="flex justify-between items-center text-white">
+          <li class="px-[1.5rem]">
+            <a href="{{ url_for('homepage') }}" class="animated-underline">Home</a>
+          </li>
+          <li class="px-[1.5rem]">
+            <a href="{{ url_for('aboutme') }}" class="animated-underline">About Me</a>
+          </li>
+          <li class="px-[1.5rem]">
+            <a href="{{ url_for('skills') }}" class="animated-underline">Skills</a>
+          </li>
+        </ul>
+        <!-- Logo -->
+        <ul
+          class="flex items-center px-[5rem] pb-[2.125rem] pt-[4.125rem] font-fredoka-one font-bold text-[1.5rem] text-[#FFB22C] rounded-full bg-[#FEF3E2] mt-[-2rem] gap-[1rem]"
+        >
+          <li>
+            <img
+              src="{{ url_for('static', filename='images/mooserage_logo.svg') }}"
+              alt="Mooserage Logo"
+              class="w-[3rem] h-[3rem]"
+            />
+          </li>
+          <li><a href="{{ url_for('homepage') }}" class="animated-underline">MOOSERAGE</a></li>
+        </ul>
+        <!-- Right Nav -->
+        <ul id="nav-right" class="flex justify-between items-center text-white">
+          <li class="px-[1.5rem]">
+            <a href="{{ url_for('projects') }}" class="animated-underline">Projects</a>
+          </li>
+          <li class="px-[1.5rem]">
+            <a href="{{ url_for('contact') }}" class="animated-underline">Contact</a>
+          </li>
+          <li class="px-[1.5rem]">
+            <a href="{{ url_for('resume') }}" class="animated-underline">Resume</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="flex flex-row justify-center items-center p-4 gap-[2rem] opacity-[50%]">
+      <div class="w-[1rem] h-[1rem] bg-[#FFB22C] rounded-full"></div>
+      <div class="w-[1rem] h-[1rem] bg-[#FFB22C] rounded-full"></div>
+      <div class="w-[1rem] h-[1rem] bg-[#FFB22C] rounded-full"></div>
+      <div class="w-[1rem] h-[1rem] bg-[#FFB22C] rounded-full"></div>
+      <div class="w-[1rem] h-[1rem] bg-[#FFB22C] rounded-full"></div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="flex-grow w-full flex justify-center items-center text-[1.25rem]">{% block content %}{% endblock %}</main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#FFB22C] py-4 text-center text-white">
+      <div>
+        &copy; <span id="year"></span> Mooserage by Jade Atyla. All rights
+        reserved.
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='scripts/dynamics.js') }}"></script>
+  </body>
+</html>

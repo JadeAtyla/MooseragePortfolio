@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Projects{% endblock %}
+{% block content %}
+<section class="w-full max-w-5xl py-10 px-6 text-[#333]">
+  <h1 class="text-4xl font-bold mb-6">Projects</h1>
+  <div class="grid gap-6 animate-fade-in">
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+      <h2 class="text-2xl font-semibold mb-2">JecatiConstructionServices</h2>
+      <p class="mb-2">A construction service system to handle clients and quotation management.</p>
+      <p><strong>Technologies & Tools:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+      <h2 class="text-2xl font-semibold mb-2">Portfolio</h2>
+      <p class="mb-2">My personal website showcasing my background, skills, and projects.</p>
+      <p><strong>Technologies & Tools:</strong> Flask, TailwindCSS</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+      <h2 class="text-2xl font-semibold mb-2">Checklist</h2>
+      <p class="mb-2">A to-do list web app for managing daily tasks efficiently.</p>
+      <p><strong>Technologies & Tools:</strong> JavaScript, Local Storage</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
